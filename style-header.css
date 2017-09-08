@@ -1,0 +1,59 @@
+.contain-to-grid,
+.top-bar,
+.top-bar-section li:not(.has-form) a:not(.button),
+.top-bar-section ul li {
+  background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(226,226,226,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2e2e2', GradientType=0 );
+}
+
+.header .top-bar .top-bar-section > ul > li > a,
+.header .top-bar .top-bar-section--mod ul .n-header__cab__container,
+.header .top-bar .top-bar-section--mod ul .n-header__favorites span,
+.header__search a {
+  color: #111111;
+}
+
+.top-bar-section ul li.lang a {
+  color: #111111 !important;
+}
+
+.header .top-bar .top-bar-section > ul > li:hover a,
+.header .top-bar .top-bar-section--mod ul .n-header__cab__container:hover,
+.header .top-bar .top-bar-section--mod ul .n-header__cab:hover span {
+  color: #fff;
+}
+
+@media all and (min-width:767px){
+  .header .top-bar .top-bar-section--mod ul .n-header__favorites:hover span {
+    color: #fff;
+  }
+
+  .header .top-bar .top-bar-section--mod ul .n-header__favorites:hover::after {
+      content: '';
+      height: 18px;
+      background: url(local/templates/b2c/img/favorites-heart.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+}
+
+.header .top-bar .toggle-topbar.menu-icon a {
+  border-color: #4c4c4c;
+}
+
+.header .top-bar .toggle-topbar.menu-icon a span::after {
+  content: '';
+      box-shadow: 0 0 0 2px #4c4c4c, 0 7px 0 2px #4c4c4c, 0 14px 0 2px #4c4c4c;
+}
+
+
+/**/
+.header .top-bar .top-bar-section .label {
+  background-color: #fb0000;
+}
