@@ -1,25 +1,69 @@
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('./fonts/MyriadProRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MyriadProCond';
+    src: url('./fonts/MyriadProCondRegular.woff') format('woff');
+}
+
+
 .registration {
     background: #fff url(./new-images/bg-reg.jpg) 50% 50% no-repeat;
     font-family: 'Myriad Pro', sans-serif;
+    position: relative;
 }
 
 .registration__box {
     max-width: 490px;
     margin: 0 auto;
+    padding-top: 50px;
 }
 
 .registration__title {
     font-size: 48px;
     color: #8d0d0b;
+    text-align: center;
+    font-family: 'MyriadProCond', sans-serif;
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 .registration__subtitle {
     font-size: 24px;
     color: #1c1b1b;
+    text-align: center;
+    font-family: 'MyriadProCond', sans-serif;
+    text-transform: uppercase;
 }
 
 .registration__decor {
+    width: 29px;
+    height: 31px;
+    background: url(./new-images/icon-registration-decor.png) 0 0 no-repeat;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 20px;
+}
 
+.registration__decor::before,
+.registration__decor::after {
+    content: '';
+    width: 22px;
+    height: 6px;
+    background-color: #750b09;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+}
+
+.registration__decor::before {
+    left: -34px;
+}
+
+.registration__decor::after {
+    right: -34px;
 }
 
 .registration-form {
@@ -41,7 +85,7 @@
 }
 
 .registration-form__item {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .c-label {
@@ -49,13 +93,19 @@
 }
 
 .c-input {
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid #d5d1ca;
     outline: none;
+    height: auto !important;
+    padding: 0.3rem !important;
 }
 
 .c-label {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
+}
+
+.c-label--code-picture {
+    margin-bottom: 0;
 }
 
 .c-note {
@@ -75,6 +125,103 @@
     cursor: pointer;
     padding: 6px 12px;
 }
+
+.registration-form__btn:disabled {
+    background-color: #750b09 !important;
+    opacity: .6;
+}
+
+
 .registration-form__btn:hover {
     background-color: #750b09;
+}
+
+.c-checkbox input {
+    display: none;
+}
+
+.c-checkbox label {
+    padding-left: 27px;
+    font-size: 16px;
+    color: #333333;
+    position: relative;
+    margin: 0 !important;
+}
+
+.c-checkbox label::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #d5d1ca;
+}
+.c-checkbox input:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    width: 17px;
+    height: 12px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAMCAYAAACEJVa/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYpJREFUeNqckbtKA0EUhs9sdhPNZdFGsZfgE0gMNvoIou9gsWBhYZVKbazsrCwsvIAIBouFgGiCMUjeID6AsQgRMWZnZjfjf8gFCViYhY9/ztnZb2Z2xPWMSxM8OVAAh1sfn8/i8v+SvCHyBZGL/EJm7ZDMRAIuQiL9GkbGVmZiQfs2kJ4vVctSxhBYAidgcVCPk5fG+NoYl+tvY9o3fUERPm3h5WxgTBm5jawgs4B+kUffx8euHAh4ByUIjjOpDu/Keuv10pIoo1hJtIDxI8ZZrkEetY++y3UXR7iTyrtXungEgRqcM1bVYRAXojVvWes9IjuCEOfdRL4jL9Bzo76wXVLaq0Cwn052uMc8KE2xQmo6Ou3KRoKoORSBDCZsIBNDAVb3sGAR80cCpqJDiq3EHVqNO/IskA3sqDkXG+2IhoIyBDUI9sYETJUlOcemHt+fY8vzQPVFlljDdTr4F+0nHXovEOwmpzo8b5waS5YHEgZCeQWRI6iZFCJZD6ODOgQ7fwgYLEA/AgwAfcAk3yNuEfcAAAAASUVORK5CYII=);
+}
+
+
+
+/*slider*/
+.slider-detail .slick-dots li.slick-active button {
+    background: #8D0D0B;
+    border-color: #8D0D0B;
+}
+
+.slider__list .slick-dots > * {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    list-style: none;
+    box-shadow: none;
+    position: static;
+    clip: auto;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.slider-detail .slick-dots li button {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+    font-size: 1px;
+    white-space: nowrap;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.slider-detail .slick-dots li button:before {
+    content: '';
+    display: none !important;
+
+}
+
+.slider-detail .slick-dots li button {
+    width: 14px;
+    height: 14px;
+}
+
+.slider-detail .slick-dots {
+    bottom: 10px !important;
 }

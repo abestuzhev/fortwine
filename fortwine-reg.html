@@ -23,7 +23,11 @@
     <!-- <link href="local/templates/b2c/css/page_8c17d61863f28a1b9aff5397d4c0d194.css" type="text/css"  rel="stylesheet" /> -->
     <link href="template_238e2c4f93f4ebb6acb7a9babe407f5a.css" type="text/css"  data-template-style="true"  rel="stylesheet" />
     <link href="style-header.css" type="text/css"  data-template-style="true"  rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
     <script type="text/javascript" src="script-header.js"></script>
 
     <!-- <link href="/bitrix/cache/css/s1/main/kernel_main/kernel_main.css?15030469493040" type="text/css"  rel="stylesheet" />
@@ -140,74 +144,77 @@
                 <h1 class="registration__title">Регистрация fortwine.ru</h1>
                 <h3 class="registration__subtitle">Заполните обязательные поля для быстрой регистрации</h3>
                 <div class="registration__decor"></div>
-                <form action="" class="registration-form">
+                <form action="" class="registration-form" id="registration-form">
                     <div class="registration-form__grid">
                         <div class="registration-form__col">
                             <div class="registration-form__item">
                                 <label class="c-label" for="registration_user-name"><span class="c-note">*</span>Ф.И.О.</label>
-                                <input class="c-input" type="text" name="registration_user-name" id="registration_user-name">
+                                <input class="c-input" type="text" name="registration_user-name" id="registration_user-name" placeholder="Введите ФИО">
                             </div>
                         </div>
                         <div class="registration-form__col">
                             <div class="registration-form__item">
                                 <label class="c-label" for="registration_date">Дата рождения</label>
-                                <input class="c-input" type="text" name="registration_date" id="registration_date">
+                                <input class="c-input js-data-mask" type="text" name="registration_date" id="registration_date" placeholder="Введите дату рождения">
                             </div>
                         </div>
                         <div class="registration-form__col">
                             <div class="registration-form__item">
                                 <label class="c-label" for="registration_phone-number"><span class="c-note">*</span>Телефон</label>
-                                <input class="c-input" type="text" name="registration_phone-number" id="registration_phone-number">
+                                <input class="c-input js-phone-mask" type="text" name="registration_phone-number" id="registration_phone-number" placeholder="Введите телефон">
                             </div>
                         </div>
                         <div class="registration-form__col">
                             <div class="registration-form__item">
                                 <label class="c-label" for="registration_additional-phone-number">Доп. телефон</label>
-                                <input class="c-input" type="text" name="registration_additional-phone-number" id="registration_additional-phone-number">
+                                <input class="c-input js-phone-mask" type="text" name="registration_additional-phone-number" id="registration_additional-phone-number" placeholder="Введите доп.телефон">
                             </div>
                         </div>
                         <div class="registration-form__col">
                             <div class="registration-form__item">
                                 <label class="c-label" for="registration_email">Email:</label>
-                                <input class="c-input" type="text" name="registration_email" id="registration_email">
+                                <input class="c-input" type="text" name="registration_email" id="registration_email" placeholder="Введите email">
                             </div>
                         </div>
                         <div class="registration-form__col">
                             <div class="registration-form__item">
                                 <label class="c-label" for="registration_company">Компания:</label>
-                                <input class="c-input" type="text" name="registration_company" id="registration_company">
+                                <input class="c-input" type="text" name="registration_company" id="registration_company" placeholder="Введите название компании">
                             </div>
                         </div>
 
                     </div>
                     <div class="registration-form__item">
-                        <div class="checkboxes">
-                            <label for="rules" class="n-main__filter__check">
-                                <input type="checkbox" value="Y" class="filtr_check" checked="checked" name="reg_rules">
-                                <div></div>
-                            </label>
-                            <a href="/rules/">Я согласен с Правилами сайта</a>
+                        <div class="c-checkbox">
+                            <input type="checkbox" value="Y" checked="checked" name="registration-user" id="registration__consent-regulations">
+                            <label for="registration__consent-regulations">Я согласен с Правилами сайта</label>
                         </div>
                     </div>
                     <div class="registration-form__item">
-                        <div class="checkboxes">
-                            <label for="rules" class="n-main__filter__check">
-                                <input type="checkbox" value="Y" class="filtr_check" checked="checked" name="reg_personal">
-                                <div></div>
-                            </label>
-                            Согласие на обработку моих персональных данных предоставляю
+                        <div class="c-checkbox">
+                            <input type="checkbox" value="Y" checked="checked" name="registration-user" id="registration__consent-data">
+                            <label for="registration__consent-data">Согласие на обработку моих персональных данных предоставляю</label>
                         </div>
                     </div>
-
-
-                    <input type="submit" class="registration-form__btn" name="register_submit_button" value="Зарегистрироваться" style="width: 100% !important;">
+                    <div class="registration-form__grid">
+                        <div class="registration-form__col">
+                           <img src="./new-images/captcha.png" alt="">
+                        </div>
+                        <div class="registration-form__col">
+                            <div class="registration-form__item">
+                                <label class="c-label c-label--code-picture" for="registration_company"><span class="c-note">*</span>Введите код с картинки:</label>
+                                <input class="c-input" type="text" name="registration_company">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="registration-form__btn" name="register_submit_button" style="width: 100% !important;">Зарегистрироваться</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
-<div class="footer" style="width:100%;height:100px;background-color:#eee;"></div>
+
 
 
 
