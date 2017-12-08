@@ -180,6 +180,10 @@
 
 
 /*slider*/
+.slider-detail__text {
+    padding: 14px 20px;
+}
+
 .slider-detail .slick-dots li.slick-active button {
     background: #8D0D0B;
     border-color: #8D0D0B;
@@ -233,7 +237,15 @@
 }
 
 .slider-detail .slick-dots {
-    bottom: 10px !important;
+    bottom: auto !important;
+    top: 480px;
+}
+
+@media screen and (max-width: 1380px) {
+    .slider-detail .slick-dots {
+        top: auto;
+        bottom: -25px !important;
+    }
 }
 
 @media screen and (max-height: 800px) {
@@ -264,4 +276,6 @@
     .registration__subtitle {
         font-size: 18px;
     }
+
 }
+
