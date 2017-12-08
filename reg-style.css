@@ -101,6 +101,7 @@
     font-size: 16px;
 }
 
+
 .c-input {
     font-size: 14px;
     border: 1px solid #d5d1ca;
@@ -175,6 +176,13 @@
     width: 17px;
     height: 12px;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAMCAYAAACEJVa/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYpJREFUeNqckbtKA0EUhs9sdhPNZdFGsZfgE0gMNvoIou9gsWBhYZVKbazsrCwsvIAIBouFgGiCMUjeID6AsQgRMWZnZjfjf8gFCViYhY9/ztnZb2Z2xPWMSxM8OVAAh1sfn8/i8v+SvCHyBZGL/EJm7ZDMRAIuQiL9GkbGVmZiQfs2kJ4vVctSxhBYAidgcVCPk5fG+NoYl+tvY9o3fUERPm3h5WxgTBm5jawgs4B+kUffx8euHAh4ByUIjjOpDu/Keuv10pIoo1hJtIDxI8ZZrkEetY++y3UXR7iTyrtXungEgRqcM1bVYRAXojVvWes9IjuCEOfdRL4jL9Bzo76wXVLaq0Cwn052uMc8KE2xQmo6Ou3KRoKoORSBDCZsIBNDAVb3sGAR80cCpqJDiq3EHVqNO/IskA3sqDkXG+2IhoIyBDUI9sYETJUlOcemHt+fY8vzQPVFlljDdTr4F+0nHXovEOwmpzo8b5waS5YHEgZCeQWRI6iZFCJZD6ODOgQ7fwgYLEA/AgwAfcAk3yNuEfcAAAAASUVORK5CYII=);
+}
+
+
+.c-checkbox label:hover {
+    color: #750b09;
+    text-decoration: underline;
+    /*text-decoration-skip: ink;*/
 }
 
 
