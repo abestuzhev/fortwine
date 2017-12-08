@@ -1,0 +1,80 @@
+.registration {
+    background: #fff url(./new-images/bg-reg.jpg) 50% 50% no-repeat;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+.registration__box {
+    max-width: 490px;
+    margin: 0 auto;
+}
+
+.registration__title {
+    font-size: 48px;
+    color: #8d0d0b;
+}
+
+.registration__subtitle {
+    font-size: 24px;
+    color: #1c1b1b;
+}
+
+.registration__decor {
+
+}
+
+.registration-form {
+    color: #333333;
+}
+
+.registration-form__grid {
+    margin-right: -11px;
+    margin-left: -11px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.registration-form__col {
+    padding: 0 11px;
+    width: 50%;
+}
+
+.registration-form__item {
+    margin-bottom: 15px;
+}
+
+.c-label {
+    font-size: 16px;
+}
+
+.c-input {
+    font-size: 16px;
+    border: 1px solid #d5d1ca;
+    outline: none;
+}
+
+.c-label {
+    margin-bottom: 12px;
+}
+
+.c-note {
+    color: #c53937;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+.registration-form__btn {
+    background-color: #750b09;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 12px;
+}
+.registration-form__btn:hover {
+    background-color: #750b09;
+}
